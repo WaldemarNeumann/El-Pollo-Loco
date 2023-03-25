@@ -1,0 +1,147 @@
+class Endboss extends MovableObject {
+    width = 200;
+    height = 400;
+    y = 80;
+    x = 3500;
+    speed = 1;
+
+    isAlert = false;
+    isAttack = false;
+    isHurt = false;
+    isDead = false;
+    chickenBossAlert_sound = new Audio('../EL_POLLO_LOCO/audio/danger.mp3');
+    chickenBossHurt_sound = new Audio('../EL_POLLO_LOCO/audio/roar.mp3');
+    chickenBossDead_sound = new Audio('../EL_POLLO_LOCO/audio/win.mp3');
+
+    imagesWalking = [
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/1_walk/G1.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/1_walk/G2.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/1_walk/G3.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/1_walk/G4.png'
+    ];
+
+    imagesAlert = [
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/2_alerts/G5.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/2_alerts/G6.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/2_alerts/G7.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/2_alerts/G8.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/2_alerts/G9.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/2_alerts/G10.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/2_alerts/G11.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/2_alerts/G12.png'
+    ];
+
+    imagesAttack = [
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/3_attack/G13.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/3_attack/G14.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/3_attack/G15.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/3_attack/G16.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/3_attack/G17.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/3_attack/G18.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/3_attack/G19.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/3_attack/G20.png'
+
+    ];
+
+    imagesHurt = [
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/4_hurt/G21.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/4_hurt/G22.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/4_hurt/G23.png'
+    ];
+
+    imagesDead = [
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/5_dead/G24.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/5_dead/G25.png',
+        '../EL_POLLO_LOCO/img/4_enemie_boss_chicken/5_dead/G26.png'
+    ];
+
+
+
+
+    constructor() {
+        super().loadImage(this.imagesWalking[1]);
+        this.loadImages(this.imagesAlert);
+        this.loadImages(this.imagesAttack);
+        this.loadImages(this.imagesHurt);
+        this.loadImages(this.imagesDead);
+        this.endbossAlert();
+        this.endbossAttack();
+        this.endbossHurt();
+        this.endbossDead();
+    }
+
+
+    //show the endboss alert wenn the character ist <400px 
+    endbossAlert() {
+        this.chickenBossAlert_sound.pause();
+        setInterval(() => {
+            const otherObject = world.character;
+            const distance = Math.abs(this.x - otherObject.x);
+
+            if (distance < 400 && !this.isAlert) {
+                this.playanimation(this.imagesAlert);
+                if (soundOn) {
+                    this.chickenBossAlert_sound.play();
+                }
+            }
+        }, 200);
+    }
+
+
+    //show the endboss attack wenn the character ist <300px 
+    endbossAttack() {
+        setInterval(() => {
+            const otherObject = world.character;
+            const distance = Math.abs(this.x - otherObject.x);
+
+            if (distance < 300 && !this.isAttack) {
+                this.playanimation(this.imagesAttack);
+                this.x -= 10;
+            }
+        }, 200);
+    }
+
+
+    //show the endboss is hurt when is collision with bottle 
+    endbossHurt() {
+        this.chickenBossHurt_sound.pause();
+        setInterval(() => {
+            if (this.isHurt) {
+                this.playanimation(this.imagesHurt);
+                this.x -= 5;
+                this.isAlert = true;
+                this.isAttack = true;
+                if (soundOn) {
+                    this.chickenBossHurt_sound.play();
+                }
+            }
+        }, 200);
+    }
+
+
+    //show the endboss is dead 
+    endbossDead() {
+        this.chickenBossDead_sound.pause();
+        setInterval(() => {
+            if (this.isDead) {
+                this.playanimation(this.imagesDead);
+                this.x -= 0.01;
+                this.isHurt = false;
+                this.isDead = false;
+                this.endAnimation();
+            }
+        }, 200);
+    }
+
+
+    //end animation then character is dead
+    endAnimation() {
+        if (soundOn) {
+            this.chickenBossDead_sound.play();
+        }
+        setTimeout(() => {
+            document.getElementById('gameOver').classList.remove('d-none');
+            gameAudio.pause();
+        }, 3000);
+    }
+}
