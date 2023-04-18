@@ -1,404 +1,415 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-position: bottom;
-    background-size: 100% 110%;
-    background-repeat: no-repeat;
-    background-image: url('../EL_POLLO_LOCO/img/9_intro_outro_screens/hintergrung7.jpg');
-    font-family: 'Smokum', 'Courier New', Courier, monospace;
-    font-size: 25px;
-    margin: 0px;
-    /* text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.5); */
-}
-
-.canvas {
-    border-radius: 20px;
-    display: block;
-}
-
-.headline {
-    font-size: 30px;
-}
-
-.startImage {
-    background-image: url('../EL_POLLO_LOCO/img/9_intro_outro_screens/start/startscreen_1.png');
-    background-size: 100% 100%;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    border-radius: 20px;
-}
-
-.gameOver {
-    background-image: url('../EL_POLLO_LOCO/img/5_background/first_half_background.png');
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
-    z-index: 3;
-}
-
-.backToMenuButton {
-    right: 75%;
-    top: 6%;
-    z-index: 3;
-    width: 120px;
-    height: 46px;
-    position: absolute;
-    border-radius: 10%;
-    border: 3px solid black;
-    color: #e9e7ee;
-    background: #449ccf;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-    font-family: 'Smokum', 'Courier New', Courier, monospace;
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.backToMenuButton:hover {
-    transform: scale(1.2);
-}
-
-.imageGameOver {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    z-index: 2;
-}
-
-.gameInfo {
-    background: rgba(0, 0, 0, 85%);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
-    z-index: 4;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.gameInfo div>p {
-    color: white;
-    margin: 0;
-    margin-top: 7px;
-    font-size: 1.5rem;
-}
-
-.gameInfo i {
-    color: white;
-    font-size: 2rem;
-}
-
-.gameInfo div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 40%;
-    margin-top: 1rem;
-}
-
-.gameInfoMainText {
-    font-size: 3rem;
-    color: #FFD101;
-    text-align: center;
-    margin-top: 0;
-}
-
-.closeInfo {
-    position: absolute;
-    top: 0%;
-    left: 92%;
-    color: white;
-    cursor: pointer;
-}
-
-.closeInfo:hover {
-    transform: scale(1.2);
-}
-
-.divCanvas {
-    position: absolute;
-    display: block;
-}
-
-.firstBigImage {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    top: 0px;
-}
-
-.startButton {
-    right: 77%;
-    top: 6%;
-    z-index: 2;
-    width: 110px;
-    height: 55px;
-    position: absolute;
-    padding: 10px 40px 10px 40px;
-    border-radius: 100%;
-    border: 3px solid black;
-    color: #e9e7ee;
-    background: #449ccf;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-    font-family: 'Smokum', 'Courier New', Courier, monospace;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.infoGame {
-    position: absolute;
-    top: 6%;
-    left: 83%;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-}
-
-.startButton:hover {
-    transform: scale(1.2);
-}
-
-.d-none {
-    display: none !important;
-}
-
-.fullScreenImage {
-    position: absolute;
-    top: 6%;
-    left: 90%;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-}
-
-.icon-container {
-    position: absolute;
-    top: 4%;
-    left: 79%;
-    display: flex;
-    width: 120px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h2 {
-    display: none;
-    color: black;
-    text-align: center;
-}
-
-.icon-container i:first-of-type {
-    font-size: 40px;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-}
-
-.icon-container i:nth-of-type(2) {
-    font-size: 22px;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-}
-
-.icon-container i:last-of-type {
-    font-size: 30px;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-    margin-left: 5px;
-}
-
-.icon-container i:hover {
-    transform: scale(1.2);
-}
-
-.fullscreen {
-    width: 100%;
-    height: 100%;
-}
-
-.mobile-control-panel {
-    display: none;
-    width: 100%;
-    position: absolute;
-    bottom: 15px;
-    justify-content: space-around;
-}
-
-.mobile-control-panel div>i {
-    padding: 7px 30px 7px 30px;
-    border-radius: 5px;
-    background-color: #FFD101;
-}
-
-@media screen and (max-width: 720px) {
-    .divCanvas {
-        width: 100%;
-    }
-    .canvas {
-        width: 100%;
-    }
-    .gameInfo {
-        width: 100%;
-    }
-    .startButton {
-        width: 60px;
-        height: 54px;
-        font-size: 22px;
-    }
-    .gameOver {
-        width: 100%;
-    }
-    .mobile-control-panel {
+    body {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-position: bottom;
+        background-size: 100% 110%;
+        background-repeat: no-repeat;
+        background-image: url('./img/9_intro_outro_screens/hintergrung7.jpg');
+        font-family: 'Smokum', 'Courier New', Courier, monospace;
+        font-size: 25px;
+        margin: 0px;
+        /* text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.5); */
     }
-}
-
-@media screen and (max-width: 667px) {
-    .gameInfo div {
-        margin-top: 7px;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .divCanvas {
-        display: none;
-    }
-    .headline {
-        display: none;
-    }
-    h2 {
+    
+    .canvas {
+        border-radius: 20px;
         display: block;
     }
-}
-
-@media screen and (max-height: 720px) {
-    .divCanvas {
-        height: 100%;
-        width: 100%;
-        border-radius: 0px;
-    }
+    
     .headline {
-        display: none;
+        font-size: 30px;
     }
-    .canvas {
-        width: 100%;
-        height: 100%;
-        border-radius: 0px;
-    }
+    
     .startImage {
+        background-image: url('./img/9_intro_outro_screens/start/startscreen_1.png');
+        background-size: 100% 100%;
+        background-position: center;
         width: 100%;
         height: 100%;
-        border-radius: 0px;
+        position: absolute;
+        top: 0;
+        border-radius: 20px;
     }
-    .gameInfo {
-        width: 100%;
-        height: 100%;
-        border-radius: 0px;
-    }
+    
     .gameOver {
+        background-image: url('./img/5_background/first_half_background.png');
+        background-size: cover;
+        background-position: bottom;
         width: 100%;
         height: 100%;
-        border-radius: 0px;
-    }
-    .imageGameOver {
-        width: 100%;
-        height: 100%;
-        border-radius: 0px;
-    }
-    .gameInfoMainText {
-        margin-bottom: 0px;
-    }
-    .gameInfo div {
-        margin-top: 16px;
-    }
-    #body {
-        display: inherit;
-    }
-    /* .mobile-control-panel {
+        position: absolute;
+        top: 0%;
+        left: 0%;
         display: flex;
-    } */
-}
-
-@media screen and (max-height: 800px) {
-    .gameInfo div {
-        margin-top: 27px;
+        justify-content: space-between;
+        border-radius: 20px;
+        z-index: 3;
     }
-}
-
-@media screen and (max-height: 600px) {
-    .gameInfo div {
-        margin-top: 70px;
+    
+    .backToMenuButton {
+        right: 75%;
+        top: 6%;
+        z-index: 3;
+        width: 120px;
+        height: 46px;
+        position: absolute;
+        border-radius: 10%;
+        border: 3px solid black;
+        color: #e9e7ee;
+        background: #449ccf;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        font-family: 'Smokum', 'Courier New', Courier, monospace;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}
-
-@media screen and (max-height: 540px) {
-    .gameInfo div {
-        margin-top: 54px;
+    
+    .backToMenuButton:hover {
+        transform: scale(1.2);
     }
-}
-
-@media screen and (max-height: 414px) {
-    .gameInfo div {
-        margin-top: 26px;
+    
+    .imageGameOver {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        z-index: 2;
     }
-}
-
-@media screen and (max-height: 393px) {
-    .gameInfo div {
-        margin-top: 15px;
+    
+    .gameInfo {
+        background: rgba(0, 0, 0, 85%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 20px;
+        z-index: 4;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-}
-
-@media screen and (max-height: 390px) {
-    .gameInfo div {
-        margin-top: 18px;
+    
+    .gameInfo div>p {
+        color: white;
+        margin: 0;
+        margin-top: 7px;
+        font-size: 1.5rem;
     }
-}
-
-@media screen and (max-height: 375px) {
-    .gameInfo div {
-        margin-top: 16px;
+    
+    .gameInfo i {
+        color: white;
+        font-size: 2rem;
     }
-}
-
-@media screen and (max-height: 360px) {
+    
     .gameInfo div {
-        margin-top: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 40%;
+        margin-top: 1rem;
     }
-}
-
-@media screen and (max-height: 280px) {
-    .gameInfo div {
-        margin-top: -2px;
+    
+    .gameInfoMainText {
+        font-size: 3rem;
+        color: #FFD101;
+        text-align: center;
+        margin-top: 0;
     }
-}
+    
+    .closeInfo {
+        position: absolute;
+        top: 0%;
+        left: 92%;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .closeInfo:hover {
+        transform: scale(1.2);
+    }
+    
+    .divCanvas {
+        position: absolute;
+        display: block;
+    }
+    
+    .firstBigImage {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 1;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+    }
+    
+    .startButton {
+        right: 77%;
+        top: 6%;
+        z-index: 2;
+        width: 110px;
+        height: 55px;
+        position: absolute;
+        padding: 10px 40px 10px 40px;
+        border-radius: 100%;
+        border: 3px solid black;
+        color: #e9e7ee;
+        background: #449ccf;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        font-family: 'Smokum', 'Courier New', Courier, monospace;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .infoGame {
+        position: absolute;
+        top: 6%;
+        left: 83%;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    
+    .startButton:hover {
+        transform: scale(1.2);
+    }
+    
+    .d-none {
+        display: none !important;
+    }
+    
+    .fullScreenImage {
+        position: absolute;
+        top: 6%;
+        left: 90%;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    
+    .icon-container {
+        position: absolute;
+        top: 4%;
+        left: 79%;
+        display: flex;
+        width: 120px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    h2 {
+        display: none;
+        color: black;
+        text-align: center;
+    }
+    
+    .icon-container i:first-of-type {
+        font-size: 40px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+    }
+    
+    .icon-container i:nth-of-type(2) {
+        font-size: 22px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+    }
+    
+    .icon-container i:last-of-type {
+        font-size: 30px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        margin-left: 5px;
+    }
+    
+    .icon-container i:hover {
+        transform: scale(1.2);
+    }
+    
+    .fullscreen {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .mobile-control-panel {
+        display: none;
+        width: 60%;
+        position: absolute;
+        bottom: 0px;
+        justify-content: space-around;
+    }
+    
+    .mobile-control-panel div>i {
+        padding: 7px 30px 7px 30px;
+        display: block;
+        border-radius: 5px;
+        background-color: #FFD101;
+    }
+    
+    .mobileControl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mobileControlButton {
+        margin-right: 10px;
+    }
+    
+    @media screen and (max-width: 720px) {
+        .divCanvas {
+            width: 100%;
+        }
+        .canvas {
+            width: 100%;
+        }
+        .gameInfo {
+            width: 100%;
+        }
+        .startButton {
+            width: 60px;
+            height: 54px;
+            font-size: 22px;
+        }
+        .gameOver {
+            width: 100%;
+        }
+        .mobile-control-panel {
+            display: flex;
+        }
+    }
+    
+    @media screen and (max-width: 667px) {
+        .gameInfo div {
+            margin-top: 7px;
+        }
+    }
+    
+    @media screen and (max-width: 650px) {
+        .divCanvas {
+            display: none;
+        }
+        .headline {
+            display: none;
+        }
+        h2 {
+            display: block;
+        }
+    }
+    
+    @media screen and (max-height: 720px) {
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
+        .headline {
+            display: none;
+        }
+        .canvas {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+        .startImage {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+        .gameInfo {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+        .gameOver {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+        .imageGameOver {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+        }
+        .gameInfoMainText {
+            margin-bottom: 0px;
+        }
+        .gameInfo div {
+            margin-top: 16px;
+        }
+        #body {
+            display: inherit;
+        }
+        .mobile-control-panel {
+            display: flex;
+        }
+    }
+    
+    @media screen and (max-height: 800px) {
+        .gameInfo div {
+            margin-top: 27px;
+        }
+    }
+    
+    @media screen and (max-height: 600px) {
+        .gameInfo div {
+            margin-top: 70px;
+        }
+    }
+    
+    @media screen and (max-height: 540px) {
+        .gameInfo div {
+            margin-top: 54px;
+        }
+    }
+    
+    @media screen and (max-height: 414px) {
+        .gameInfo div {
+            margin-top: 26px;
+        }
+    }
+    
+    @media screen and (max-height: 393px) {
+        .gameInfo div {
+            margin-top: 15px;
+        }
+    }
+    
+    @media screen and (max-height: 390px) {
+        .gameInfo div {
+            margin-top: 18px;
+        }
+    }
+    
+    @media screen and (max-height: 375px) {
+        .gameInfo div {
+            margin-top: 16px;
+        }
+    }
+    
+    @media screen and (max-height: 360px) {
+        .gameInfo div {
+            margin-top: 14px;
+        }
+    }
+    
+    @media screen and (max-height: 280px) {
+        .gameInfo div {
+            margin-top: -2px;
+        }
+    }

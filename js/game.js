@@ -7,11 +7,11 @@ let divCanvas = document.getElementById('divCanvas');
 
 //pre-game & in game audios
 let gameAudio = new Audio();
-gameAudio.src = '../EL_POLLO_LOCO/audio/game.mp3';
+gameAudio.src = './audio/game.mp3';
 gameAudio.loop = true;
 let soundOn = false;
 let tip = new Audio();
-tip.src = '../EL_POLLO_LOCO/audio/tip1.mp3';
+tip.src = './audio/tip1.mp3';
 
 
 // start Game
@@ -56,13 +56,13 @@ function addMobileControlPanelTemplate() {
     let panel = document.createElement("div");
     panel.classList.add("mobile-control-panel");
     panel.innerHTML = /*html*/ `
-          <div>
-            <i class="bi bi-arrow-left-square" id="left"></i>
-            <i class="bi bi-arrow-right-square" id="right"></i>
+          <div class="mobileControl">
+            <i class="mobileControlButton bi bi-arrow-left-square" id="left"></i>
+            <i class="mobileControlButton bi bi-arrow-right-square" id="right"></i>
           </div>
-          <div>
-            <i class="bi bi-arrow-bar-up" id="jump"></i>
-            <i class="bi bi-fire" id="throw"></i>
+          <div class="mobileControlButton mobileControl">
+            <i class="mobileControlButton bi bi-arrow-bar-up" id="jump"></i>
+            <i class="mobileControlButton bi bi-fire" id="throw"></i>
           </div>
     `;
     return panel
@@ -78,11 +78,13 @@ function addEventListenersToPanel() {
     left.addEventListener("touchstart", (e) => {
         e.preventDefault();
         keyboard.LEFT = true;
+        console.log('Touchstart-Ereignis ausgelöst.');
     });
 
     left.addEventListener("touchend", (e) => {
         e.preventDefault();
         keyboard.LEFT = false;
+        console.log('Touchend-Ereignis ausgelöst.');
     });
 
     right.addEventListener("touchstart", (e) => {
@@ -98,11 +100,13 @@ function addEventListenersToPanel() {
     jump.addEventListener("touchstart", (e) => {
         e.preventDefault();
         keyboard.SPACE = true;
+
     });
 
     jump.addEventListener("touchend", (e) => {
         e.preventDefault();
         keyboard.SPACE = false;
+
     });
 
     throW.addEventListener("touchstart", (e) => {

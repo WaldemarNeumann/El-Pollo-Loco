@@ -3,8 +3,8 @@ class Coints extends MovableObject {
     height = 110;
 
     images = [
-        '../EL_POLLO_LOCO/img/8_coin/coin_1.png',
-        '../EL_POLLO_LOCO/img/8_coin/coin_2.png'
+        '../img/8_coin/coin_1.png',
+        '../img/8_coin/coin_2.png'
     ];
 
 
@@ -16,7 +16,7 @@ class Coints extends MovableObject {
     };
 
     constructor() {
-        super().loadImage('../EL_POLLO_LOCO/img/8_coin/coin_1.png');
+        super().loadImage('../img/8_coin/coin_1.png');
         this.loadImages(this.images);
         this.x = 200 + Math.random() * 2500;
         this.y = 120 + Math.random() * 200;
