@@ -197,10 +197,15 @@ function fullScreen() {
         fullscreen = true;
     } else {
         document.exitFullscreen();
+    }
+}
+
+document.addEventListener('fullscreenchange', (event) => {
+    if (!document.fullscreenElement) {
         fullscreen = false;
         canvas.classList.remove('fullscreen');
     }
-}
+});
 
 //render Endscreen when gameover
 function renderGameOver() {

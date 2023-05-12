@@ -4,7 +4,7 @@ class Chickensmall extends MovableObject {
     y = 403;
     x = 50;
     isDead = false;
-    chicken_sound = new Audio('../audio/chicken.mp3');
+    chicken_sound = new Audio('./audio/chicken.mp3');
 
     offset = {
         top: 5,
@@ -14,16 +14,16 @@ class Chickensmall extends MovableObject {
     };
 
     imagesWalking = [
-        '../img/3_enemies_chicken/chicken_small/1_walk/1_w.png',
-        '../img/3_enemies_chicken/chicken_small/1_walk/2_w.png',
-        '../img/3_enemies_chicken/chicken_small/1_walk/2_w.png'
+        './img/3_enemies_chicken/chicken_small/1_walk/1_w.png',
+        './img/3_enemies_chicken/chicken_small/1_walk/2_w.png',
+        './img/3_enemies_chicken/chicken_small/1_walk/2_w.png'
     ];
 
-    imageChickenDead = ['../img/3_enemies_chicken/chicken_small/2_dead/dead.png'];
+    imageChickenDead = ['./img/3_enemies_chicken/chicken_small/2_dead/dead.png'];
     currentImage = 0;
 
     constructor() {
-        super().loadImage('../img/3_enemies_chicken/chicken_small/1_walk/1_w.png');
+        super().loadImage('./img/3_enemies_chicken/chicken_small/1_walk/1_w.png');
         this.loadImages(this.imagesWalking);
         this.loadImages(this.imageChickenDead);
         this.x = 200 + Math.random() * 2500;

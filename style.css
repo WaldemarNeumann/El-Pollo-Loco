@@ -321,27 +321,27 @@
         .canvas {
             width: 100%;
             height: 100%;
-            border-radius: 0px;
+            border-radius: 20px;
         }
         .startImage {
             width: 100%;
             height: 100%;
-            border-radius: 0px;
+            border-radius: 20px;
         }
         .gameInfo {
             width: 100%;
             height: 100%;
-            border-radius: 0px;
+            border-radius: 20px;
         }
         .gameOver {
             width: 100%;
             height: 100%;
-            border-radius: 0px;
+            border-radius: 20px;
         }
         .imageGameOver {
             width: 100%;
             height: 100%;
-            border-radius: 0px;
+            border-radius: 20px;
         }
         .gameInfoMainText {
             margin-bottom: 0px;
@@ -364,10 +364,24 @@
         .gameInfo div {
             margin-top: 70px;
         }
+        .mobile-control-panel {
+            display: flex;
+            width: 76%;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-around;
+        }
         .divCanvas {
-            height: 100%;
-            width: 100%;
-            border-radius: 0px;
+            height: 80%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        body {
+            font-size: 15px;
+        }
+        .icon-container {
+            top: 4%;
+            left: 74%;
         }
     }
     
@@ -375,10 +389,24 @@
         .gameInfo div {
             margin-top: 54px;
         }
+        .mobile-control-panel {
+            display: flex;
+            width: 76%;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-around;
+        }
         .divCanvas {
-            height: 100%;
-            width: 100%;
-            border-radius: 0px;
+            height: 80%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        body {
+            font-size: 15px;
+        }
+        .icon-container {
+            top: 4%;
+            left: 74%;
         }
     }
     
@@ -388,11 +416,22 @@
         }
         .mobile-control-panel {
             display: flex;
+            width: 76%;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-around;
         }
         .divCanvas {
-            height: 100%;
-            width: 100%;
-            border-radius: 0px;
+            height: 80%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        body {
+            font-size: 15px;
+        }
+        .icon-container {
+            top: 4%;
+            left: 74%;
         }
     }
     
@@ -402,11 +441,22 @@
         }
         .mobile-control-panel {
             display: flex;
+            width: 76%;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-around;
         }
         .divCanvas {
-            height: 100%;
-            width: 100%;
-            border-radius: 0px;
+            height: 80%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        body {
+            font-size: 15px;
+        }
+        .icon-container {
+            top: 4%;
+            left: 74%;
         }
     }
     
@@ -416,11 +466,22 @@
         }
         .mobile-control-panel {
             display: flex;
+            width: 76%;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-around;
         }
         .divCanvas {
-            height: 100%;
-            width: 100%;
-            border-radius: 0px;
+            height: 80%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        body {
+            font-size: 15px;
+        }
+        .icon-container {
+            top: 4%;
+            left: 74%;
         }
     }
     
@@ -430,11 +491,22 @@
         }
         .mobile-control-panel {
             display: flex;
+            width: 76%;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-around;
         }
         .divCanvas {
-            height: 100%;
-            width: 100%;
-            border-radius: 0px;
+            height: 80%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        body {
+            font-size: 15px;
+        }
+        .icon-container {
+            top: 4%;
+            left: 74%;
         }
     }
     
@@ -444,11 +516,22 @@
         }
         .mobile-control-panel {
             display: flex;
+            width: 76%;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-around;
         }
         .divCanvas {
-            height: 100%;
-            width: 100%;
-            border-radius: 0px;
+            height: 80%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        body {
+            font-size: 15px;
+        }
+        .icon-container {
+            top: 4%;
+            left: 74%;
         }
     }
     
@@ -458,10 +541,21 @@
         }
         .mobile-control-panel {
             display: flex;
+            width: 76%;
+            position: absolute;
+            bottom: 0px;
+            justify-content: space-around;
         }
         .divCanvas {
-            height: 100%;
-            width: 100%;
-            border-radius: 0px;
+            height: 80%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        body {
+            font-size: 15px;
+        }
+        .icon-container {
+            top: 4%;
+            left: 74%;
         }
     }

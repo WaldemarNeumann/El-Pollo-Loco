@@ -17,8 +17,8 @@ class World {
     throwableObjects = [];
     bottles;
     hitCount = 0;
-    coin_sound = new Audio('../audio/coin.mp3');
-    bottle_sound = new Audio('../audio/bottle1.mp3');
+    coin_sound = new Audio('./audio/coin.mp3');
+    bottle_sound = new Audio('./audio/bottle1.mp3');
 
 
 
