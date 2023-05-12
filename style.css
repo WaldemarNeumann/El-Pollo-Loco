@@ -255,7 +255,7 @@
     }
     
     .mobile-control-panel div>i {
-        padding: 7px 30px 7px 30px;
+        padding: 2px 30px 2px 30px;
         display: block;
         border-radius: 5px;
         background-color: #FFD101;
@@ -289,9 +289,6 @@
         .gameOver {
             width: 100%;
         }
-        .mobile-control-panel {
-            display: flex;
-        }
     }
     
     @media screen and (max-width: 667px) {
@@ -312,12 +309,12 @@
         }
     }
     
-    @media screen and (max-height: 720px) {
-        .divCanvas {
+    @media screen and (max-height: 820px) {
+        /* .divCanvas {
             height: 100%;
             width: 100%;
             border-radius: 0px;
-        }
+        } */
         .headline {
             display: none;
         }
@@ -355,9 +352,6 @@
         #body {
             display: inherit;
         }
-        .mobile-control-panel {
-            display: flex;
-        }
     }
     
     @media screen and (max-height: 800px) {
@@ -370,11 +364,21 @@
         .gameInfo div {
             margin-top: 70px;
         }
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
     }
     
     @media screen and (max-height: 540px) {
         .gameInfo div {
             margin-top: 54px;
+        }
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
         }
     }
     
@@ -382,11 +386,27 @@
         .gameInfo div {
             margin-top: 26px;
         }
+        .mobile-control-panel {
+            display: flex;
+        }
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
     }
     
     @media screen and (max-height: 393px) {
         .gameInfo div {
             margin-top: 15px;
+        }
+        .mobile-control-panel {
+            display: flex;
+        }
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
         }
     }
     
@@ -394,11 +414,27 @@
         .gameInfo div {
             margin-top: 18px;
         }
+        .mobile-control-panel {
+            display: flex;
+        }
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
     }
     
     @media screen and (max-height: 375px) {
         .gameInfo div {
             margin-top: 16px;
+        }
+        .mobile-control-panel {
+            display: flex;
+        }
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
         }
     }
     
@@ -406,10 +442,26 @@
         .gameInfo div {
             margin-top: 14px;
         }
+        .mobile-control-panel {
+            display: flex;
+        }
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+        }
     }
     
     @media screen and (max-height: 280px) {
         .gameInfo div {
             margin-top: -2px;
+        }
+        .mobile-control-panel {
+            display: flex;
+        }
+        .divCanvas {
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
         }
     }
